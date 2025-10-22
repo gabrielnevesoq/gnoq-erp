@@ -1,0 +1,7 @@
+{
+  "name": "gnoq-erp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
