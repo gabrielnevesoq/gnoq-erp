@@ -1,52 +1,38 @@
-<section>
-  <h2>ORBIT - Cadastro de funcionários</h2>
-  <ion-grid id="forms">
-    <ion-row>
-      <ion-col>
-        <ion-input label="Nome"       labelPlacement="stacked" fill="outline"></ion-input>
-        <ion-input label="Cpf"        labelPlacement="stacked" fill="outline"></ion-input>
-        <ion-input label="Telefone"   labelPlacement="stacked" fill="outline"></ion-input>
-        <ion-input label="E-mail"     labelPlacement="stacked" fill="outline"></ion-input>
-      </ion-col>
-      <ion-col>
-        <ion-input label="CTPS"       labelPlacement="stacked" fill="outline"></ion-input>
-        <ion-input label="Matrícula"  labelPlacement="stacked" fill="outline"></ion-input>
-        <ion-input label="Função"     labelPlacement="stacked" fill="outline"></ion-input>
-        <ion-input label="Salário"    labelPlacement="stacked" fill="outline"></ion-input>
-      </ion-col>
-      <ion-col>
-        <ion-select label="Filhos?"   labelPlacement="stacked" fill="outline">
-          <ion-select-option>Sim</ion-select-option>
-          <ion-select-option>Não</ion-select-option>
-        </ion-select>
-        
-        <ion-item lines="none" class="custom-input" fill="outline">
-          <ion-label position="stacked">Data de Admissão</ion-label>
-          <ion-datetime-button datetime="datetime"></ion-datetime-button>
-          <ion-modal [keepContentsMounted]="true">
-            <ng-template>
-              <ion-datetime
-                id="datetime"
-                presentation="date"
-                [formatOptions]="{
-                  date: { day: '2-digit', month: '2-digit', year: 'numeric' }
-                }">
-              </ion-datetime>
-            </ng-template>
-          </ion-modal>
-        </ion-item>
-
-        <ion-input label="Data de Demissão" labelPlacement="stacked" fill="outline" type="date"></ion-input>
-        <ion-input label="CEP"              labelPlacement="stacked" fill="outline"></ion-input>
-        <ion-button>Cancelar</ion-button>
-      </ion-col>
-      <ion-col>
-        <ion-input label="Logradouro" labelPlacement="stacked" fill="outline"></ion-input>
-        <ion-input label="Cidade"     labelPlacement="stacked" fill="outline"></ion-input>
-        <ion-input label="Bairro"     labelPlacement="stacked" fill="outline"></ion-input>
-        <ion-input label="UF"         labelPlacement="stacked" fill="outline"></ion-input>
-        <ion-button>Cadastrar</ion-button>
-      </ion-col>
-    </ion-row>
-  </ion-grid>
-</section>
+<ion-card>
+  <ion-card-title>Cadastro de Funcionários</ion-card-title>
+  <ion-card-content>
+    <ion-grid id="forms">
+      <ion-row>
+        <ion-col>
+          <ion-input label="Nome"       labelPlacement="stacked" fill="outline"></ion-input>
+          <ion-input label="Cpf"        labelPlacement="stacked" fill="outline"></ion-input>
+          <ion-input label="Telefone"   labelPlacement="stacked" fill="outline"></ion-input>
+          <ion-input label="E-mail"     labelPlacement="stacked" fill="outline"></ion-input>
+        </ion-col>
+        <ion-col>
+          <ion-input label="CTPS"       labelPlacement="stacked" fill="outline"></ion-input>
+          <ion-input label="Matrícula"  labelPlacement="stacked" fill="outline"></ion-input>
+          <ion-input label="Função"     labelPlacement="stacked" fill="outline"></ion-input>
+          <ion-input label="Salário"    labelPlacement="stacked" fill="outline"></ion-input>
+        </ion-col>
+        <ion-col>
+          <ion-select label="Filhos?"   labelPlacement="stacked" fill="outline">
+            <ion-select-option>Sim</ion-select-option>
+            <ion-select-option>Não</ion-select-option>
+          </ion-select>
+          <ion-input label="Data de Admissão" labelPlacement="stacked" fill="outline" type="date"></ion-input>
+          <ion-input label="Data de Demissão" labelPlacement="stacked" fill="outline" type="date"></ion-input>
+          <ion-input label="CEP"              labelPlacement="stacked" fill="outline"></ion-input>
+          <ion-button style="--background: red;">Cancelar</ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-input label="Logradouro" labelPlacement="stacked" fill="outline"></ion-input>
+          <ion-input label="Cidade"     labelPlacement="stacked" fill="outline"></ion-input>
+          <ion-input label="Bairro"     labelPlacement="stacked" fill="outline"></ion-input>
+          <ion-input label="UF"         labelPlacement="stacked" fill="outline"></ion-input>
+          <ion-button style="--background: green;">Cadastrar</ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-card-content>
+</ion-card>
