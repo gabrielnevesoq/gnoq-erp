@@ -6,6 +6,7 @@ import { HomePage } from './home.page';
 
 import { HomePageRoutingModule } from './home-routing.module';
 import { CadastroFuncionarioComponent } from '../components/cadastro-funcionario/cadastro-funcionario.component';
+import { HeaderComponent } from '../components/header/header.component';
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import { CadastroFuncionarioComponent } from '../components/cadastro-funcionario
     FormsModule,
     IonicModule,
     HomePageRoutingModule,
-    CadastroFuncionarioComponent
+    CadastroFuncionarioComponent,
+    HeaderComponent
   ],
   declarations: [HomePage]
 })

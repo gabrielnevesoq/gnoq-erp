@@ -1,0 +1,11 @@
+ion-header {
+    box-shadow: none;
+    border-bottom: 5px solid #5c45be;
+    ion-toolbar {
+        padding: 20px;
+        --background: #fafafb;
+        img {
+            width: 25vh;
+        }
+    }
+}

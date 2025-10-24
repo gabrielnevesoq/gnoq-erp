@@ -4,33 +4,41 @@
     <ion-grid id="forms">
       <ion-row>
         <ion-col>
-          <ion-input label="Nome"       labelPlacement="stacked" fill="outline"></ion-input>
-          <ion-input label="Cpf"        labelPlacement="stacked" fill="outline"></ion-input>
-          <ion-input label="Telefone"   labelPlacement="stacked" fill="outline"></ion-input>
-          <ion-input label="E-mail"     labelPlacement="stacked" fill="outline"></ion-input>
+          <ion-input label="Nome"       labelPlacement="stacked" fill="outline" [(ngModel)]="nome"    ></ion-input>
+          <ion-input label="Cpf" labelPlacement="stacked" fill="outline" [(ngModel)]="cpf" mask="000.000.000-00" (ionBlur)="ValidarCPF()" placeholder="000.000.000-00"></ion-input>
+          <!-- Mostra erro caso CPF inválido -->
+          <ion-text color="danger" *ngIf="cpfInvalido">
+            CPF inválido
+          </ion-text>
+          <ion-input label="Telefone"   labelPlacement="stacked" fill="outline" [(ngModel)]="telefone"></ion-input>
+          <ion-input label="E-mail"     labelPlacement="stacked" fill="outline" [(ngModel)]="email"   ></ion-input>
         </ion-col>
         <ion-col>
-          <ion-input label="CTPS"       labelPlacement="stacked" fill="outline"></ion-input>
-          <ion-input label="Matrícula"  labelPlacement="stacked" fill="outline"></ion-input>
-          <ion-input label="Função"     labelPlacement="stacked" fill="outline"></ion-input>
-          <ion-input label="Salário"    labelPlacement="stacked" fill="outline"></ion-input>
+          <ion-input label="CTPS"       labelPlacement="stacked" fill="outline" [(ngModel)]="ctps"     ></ion-input>
+          <ion-input label="Matrícula"  labelPlacement="stacked" fill="outline" [(ngModel)]="matricula"></ion-input>
+          <ion-input label="Função"     labelPlacement="stacked" fill="outline" [(ngModel)]="funcao"   ></ion-input>
+          <ion-input label="Salário"    labelPlacement="stacked" fill="outline" [(ngModel)]="salario"  ></ion-input>
         </ion-col>
         <ion-col>
-          <ion-select label="Filhos?"   labelPlacement="stacked" fill="outline">
+          <ion-select label="Filhos?"   labelPlacement="stacked" fill="outline" [(ngModel)]="filhos">
             <ion-select-option>Sim</ion-select-option>
             <ion-select-option>Não</ion-select-option>
           </ion-select>
-          <ion-input label="Data de Admissão" labelPlacement="stacked" fill="outline" type="date"></ion-input>
-          <ion-input label="Data de Demissão" labelPlacement="stacked" fill="outline" type="date"></ion-input>
-          <ion-input label="CEP"              labelPlacement="stacked" fill="outline"></ion-input>
+          <ion-input label="Data de Admissão" labelPlacement="stacked" fill="outline" type="date" [(ngModel)]="data_admissao_errada"></ion-input>
+          <ion-input label="Data de Demissão" labelPlacement="stacked" fill="outline" type="date" [(ngModel)]="data_demissao_errada"></ion-input>
+          <ion-input label="CEP"              labelPlacement="stacked" fill="outline" [(ngModel)]="cep"></ion-input>
           <ion-button style="--background: red;">Cancelar</ion-button>
         </ion-col>
         <ion-col>
-          <ion-input label="Logradouro" labelPlacement="stacked" fill="outline"></ion-input>
-          <ion-input label="Cidade"     labelPlacement="stacked" fill="outline"></ion-input>
-          <ion-input label="Bairro"     labelPlacement="stacked" fill="outline"></ion-input>
-          <ion-input label="UF"         labelPlacement="stacked" fill="outline"></ion-input>
-          <ion-button style="--background: green;">Cadastrar</ion-button>
+          <ion-input label="Logradouro" labelPlacement="stacked" fill="outline" [(ngModel)]="logradouro"></ion-input>
+          <ion-input label="Cidade"     labelPlacement="stacked" fill="outline" [(ngModel)]="cidade"    ></ion-input>
+          <ion-input label="Bairro"     labelPlacement="stacked" fill="outline" [(ngModel)]="bairro"    ></ion-input>
+          <ion-input label="UF"         labelPlacement="stacked" fill="outline" [(ngModel)]="uf"        ></ion-input>
+          <ion-button 
+          style="--background: green;" 
+          (click)="InsertPessoa(nome, cpf, telefone, email, ctps, matricula, funcao, salario, filhos, data_admissao, data_demissao, cep, logradouro, cidade, bairro, uf)">
+            Cadastrar
+          </ion-button>
         </ion-col>
       </ion-row>
     </ion-grid>
