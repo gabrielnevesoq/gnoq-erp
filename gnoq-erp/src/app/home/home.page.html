@@ -1,5 +1,5 @@
 <app-header></app-header>
 
 <ion-content>
-  <app-cadastro-funcionario></app-cadastro-funcionario>
+  <app-cadastro-funcionario *ngIf="cadastro_pessoa === 'aberto'"></app-cadastro-funcionario>
 </ion-content>

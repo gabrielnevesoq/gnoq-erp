@@ -7,5 +7,20 @@ ion-header {
         img {
             width: 25vh;
         }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
     }
+}
+
+/* Remove o padding do conteúdo do accordion e alinha o sub-item */
+ion-accordion.accordion-content div[slot="content"] {
+  padding-inline-start: 0;
+}
+
+/* Adiciona um leve recuo (indentação) para o sub-menu */
+ion-accordion .accordion-content ion-item {
+  --padding-start: 2.5rem; 
 }

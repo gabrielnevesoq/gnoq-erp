@@ -1,5 +1,26 @@
 <ion-header>
   <ion-toolbar>
-    <img src="assets/ORBIT.png" alt="">
+    <div class="header">
+      <img src="assets/ORBIT.png" alt="">
+      <ion-buttons slot="end"> 
+        <ion-button id="menu-dp-trigger">
+          <ion-label>Departamento Pessoal</ion-label>
+        </ion-button>
+      </ion-buttons>
+    </div>
   </ion-toolbar>
 </ion-header>
+
+<!-- Opções do modal setor pessoal -->
+<ion-popover trigger="menu-dp-trigger" [dismissOnSelect]="true" alignment="end" side="bottom">
+  <ng-template>
+    <ion-content>
+      <ion-list>
+        <ion-item [button]="true" [detail]="false">
+          <ion-icon name="person-add-outline" slot="start"></ion-icon>
+          <ion-label>Cadastro de Funcionário</ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-content>
+  </ng-template>
+</ion-popover>
